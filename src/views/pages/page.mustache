@@ -1,0 +1,24 @@
+{{>partials/header}}
+{{#banner}}
+<section class="banner" style="background-image: url('images/{{banner.background}}')">{{banner.title}}</section>
+<h2>{{banner.title}} avaliable for donation</h2>
+{{/banner}}
+
+<div class="container list">
+        {{#list}}
+                <div class="item">
+                    <img src="images/{{image}}" class="item--image" />
+                    <div class="item--name">{{name}}</div>
+                    <div class="item--color">Color: {{color}}</div>
+                    <div class="item--genre">{{sex}}</div>
+                </div>
+        {{/list}}
+    </div>
+
+{{^list}}
+    <div class="container no-list">
+        <h2>Is there are no animals avaliable in this condition</h2>
+    </div>
+{{/list}}
+
+{{>partials/footer}}
